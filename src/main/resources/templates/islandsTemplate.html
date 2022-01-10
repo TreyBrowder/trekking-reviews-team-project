@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="/styles/style.css" rel="stylesheet">
+    <link href="/css/layout.css" rel="stylesheet">
+    <title>Islands</title>
+</head>
+
+<header>
+    <nav>
+        <ul>
+            <li><a th:href="@{/}">Home</a></li>
+            <li><a th:href="@{/Continents}">Continents</a></li>
+            <li><a th:href="@{/countries}">Countries</a></li>
+            <li><a th:href="@{/islands}">Islands</a></li>
+            <li><a th:href="@{/oceans}">Oceans</a></li>
+            <li><a th:href="aboutUsTemplate.html">About Us</a></li>
+            <li><a th:href="executivePage.html">The Team</a></li>
+            <li><a th:href="reviews.html">Reviews</a></li>
+            <input type="text" placeholder="Search..">
+        </ul>
+        <!--                <a th:href="@{/aboutUsTemplate">About Us</a>-->
+    </nav>
+</header>
+<h1>Travel at the Tip of Your Fingers</h1>
+
+<h2 th:each="island:${islands}"><a th:href="@{'/islands/'+ ${island.name}}"
+                                   th:text="${island.name}">Continent</a>
+</h2>
+
+<div id="Fiji">
+
+    <h3>Fiji</h3>
+    <img src="/images/Fiji.jpg" alt="an image of Fiji" class="countries">
+
+    <p>Why Go To Fiji?
+        With its turquoise waters, glittering sands and luxe resorts, Fiji is similar to many other tropical getaways.
+        Likewise, the set of 333 islands caters to lovebirds of all kinds. Plus, adventure-seekers, like surfers and divers,
+        appreciate the archipelago's quality waves and coral reefs. But Fiji differs from other island destinations in its otherworldliness.
+        Since it's more than 1,300 miles from New Zealand's North Island in the South Pacific Ocean, Fiji affords you the delectable feeling of seclusion.
+        You'll be as far from reality as possible when you're sipping Fiji Bitter beer and watching the sun dip below the horizon. Fijian customs will
+        make you feel a million miles away too: Ever tasted the dizzying kava drink?
+        Or watched men defy fire and walk across scalding stones without burning their feet? If not, it's about time you did.
+    </p>
+
+</div>
+
+<div id="Levanzo">
+
+    <h3>Levanzo</h3>
+    <img src="/images/levanzo.jpg" alt="an image of Levanzo" class="countries">
+
+    <p>
+        Explore Levanzo
+        Although Levanzo is a very small island with limited tourist facilities you will find that it is very pleasant to explore.
+        The Port of Levanzo has quaint small whitewashed houses around the harbour and with the hill rising steeply behind
+        and small boats bobbing on the water, it is very picturesque.
+
+        One of the first things you will notice is the extraordinary colour of the sea which has a pure rock seabed and is wonderfully clear.
+        Swimming and snorkling to admire the abundant sealife are popular activites around the coast and especially around the 'Faraglione' on the west of the island
+        where the marine life is particularly abundant. Diving and fishing trips can be organised on the island.
+    </p>
+</div>
+    <div id="Maui">
+
+        <h3>Maui</h3>
+        <img src="/images/maui.jpg" alt="an image of Maui" class="countries">
+
+        <p>
+            Welcome to Maui
+            Maui, known also as “The Valley Isle,” is the second largest Hawaiian island. The island beloved for its world-famous beaches,
+            the sacred Iao Valley, views of migrating humpback whales (during winter months), farm-to-table cuisine and the magnificent sunrise and sunset from Haleakala.
+            It’s not surprising Maui has been voted "Best Island in the U.S." by Condé Nast Traveler readers for more than 20 years.
+            Check out the regions of Maui and all this island has to offer.
+        </p>
+    </div>
+    <div id="La Tortuga">
+
+        <h3>La Tortuga</h3>
+        <img src="/images/LaTortuga.jpg" alt="an image of La Tortuga" class="countries">
+
+        <p>
+            Whether guests want to spend the day relaxing on the beach or hiking the forested trails of the Tortuga Island or both, they can accomplish their goals easily within a day.
+
+            Beach denizens will be happy to see upon arrival a large, white sand beach with lounge chairs and umbrellas that can be rented for a nominal fee.
+
+            There is plentiful food to be had, and a ready supply of refreshing drinks and fresh fruit that is synonymous with Costa Rican hospitality.
+
+            Visitors are free to bask in the sun all day or venture into the water, where they can snorkel and swim to their hearts’ content. Beach volleyball and other activities, such as rides in glass-bottom boats or kayaking, are available as well.
+        </p><div id="Santiago">
+
+        <h3>Santiago</h3>
+        <img src="/images/Santiago.jpg" alt="an image of Santiago" class="countries">
+
+        <p>
+            Santiago Island (Spanish pronunciation: [sanˈtjaɣo]) is one of the Galápagos Islands.[1] It is also known as San Salvador, named after the first island discovered by Columbus in the Caribbean Sea (see San Salvador Island),
+            or as James Island. The island, which consists of two overlapping volcanoes, has an area of 585 square kilometers (226 sq mi) and a maximum altitude of 907 meters (2,976 ft), atop the northwestern shield volcano.
+            The volcano in the island's southeast erupted along a linear fissure, and is much lower. The oldest lava flows on the island date back to 750,000 years ago.[2]
+        </p>
+</div>
+        <div id="Similan Islands">
+
+            <h3>Similan</h3>
+            <img src="/images/similanislands.jpg" alt="an image of La Tortuga" class="countries">
+
+        Put simply, the Similan Islands are natural wonders, full of low-lying formations covered in plush, dense forests and surrounded by the clearest waters imaginable.
+
+        This is a sight to behold in itself but then you as soon as you delve beneath the waters, you will discover why Koh Similan is one of the top 10 most interesting dive areas in the world!
+    </div>
+    </div>
+</html>

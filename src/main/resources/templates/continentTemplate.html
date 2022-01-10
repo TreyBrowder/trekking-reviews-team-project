@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="/styles/style.css" rel="stylesheet">
+    <link href="/css/layout.css" rel="stylesheet">
+    <title>Continents</title>
+</head>
+
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a th:href="@{/}">Home</a></li>
+            <li><a th:href="@{/Continents}">Continents</a></li>
+            <li><a th:href="@{/countries}">Countries</a></li>
+            <li><a th:href="@{/islands}">Islands</a></li>
+            <li><a th:href="@{/oceans}">Oceans</a></li>
+            <li><a th:href="aboutUsTemplate.html">About Us</a></li>
+            <li><a th:href="executivePage.html">The Team</a></li>
+            <li><a th:href="reviews.html">Reviews</a></li>
+            <input type="text" placeholder="Search..">
+        </ul>
+        <!--                <a th:href="@{/aboutUsTemplate">About Us</a>-->
+    </nav>
+</header>
+<h1>Travel at the Tip of Your Fingers</h1>
+
+<h2 th:each="continent:${continents}"><a th:href="@{'/continents/'+ ${continent.name}}"
+                                         th:text="${continent.name}">Continent</a>
+</h2>
+
+<div id="continent desc">
+
+    <h3> </h3>
+    <img src="">
+
+    <p>Spicy jalapeno bacon ipsum dolor amet salami cupim id pork chop, shoulder kevin buffalo swine tenderloin in ut short loin.
+        Do cow consectetur nostrud aute. Biltong boudin est commodo prosciutto.
+        Eiusmod ex aliqua, shankle pariatur reprehenderit shank jowl cupidatat leberkas ad lorem turkey in anim.
+    </p>
+
+
+
+
+</div>
+
+</body>
+
+</html>

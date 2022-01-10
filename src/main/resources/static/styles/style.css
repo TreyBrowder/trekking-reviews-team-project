@@ -1,0 +1,92 @@
+*{
+    font-size:14px;
+    font-style:courier;
+}
+
+body{
+    padding: 50px;
+    background-color: lightblue;
+      display: block;
+      min-width: 750px;
+      margin-top: 0;
+      height: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:grey;
+  }
+
+  li {
+      float: left;
+  }
+
+  li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
+
+  li a:hover {
+      background-color: #111;
+  }
+
+  #world{
+  height: 400px;
+  weight: 400px;
+  }
+
+.countries{
+height: 250px;
+weight: 250px;
+}
+
+.bio{
+height: 400px;
+weight: 400px;
+}
+
+.ocean{
+height:300px;
+width:300px;
+}
+
+body {
+  margin: 40px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-gap: 10px;
+
+}
+
+.col-sm-3 {
+  background-color: lightblue;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
+
+p {
+color: black;
+}
+
+h1 {
+color: black;
+}
+
+h2{
+color:black;
+}
+
+small{
+color:black;
+}

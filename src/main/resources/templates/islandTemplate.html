@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+
+    <title>Trekking Location: Fiji</title>
+    <link href="/styles/style.css" rel="stylesheet">
+    <link href="/css/layout.css" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a th:href="@{/}">Home</a></li>
+            <li><a th:href="@{/Continents}">Continents</a></li>
+            <li><a th:href="@{/countries}">Countries</a></li>
+            <li><a th:href="@{/islands}">Islands</a></li>
+            <li><a th:href="@{/oceans}">Oceans</a></li>
+            <li><a th:href="aboutUsTemplate.html">About Us</a></li>
+            <li><a th:href="executivePage.html">The Team</a></li>
+            <li><a th:href="reviews.html">Reviews</a></li>
+            <input type="text" placeholder="Search..">
+        </ul>
+        <!--                <a th:href="@{/aboutUsTemplate">About Us</a>-->
+    </nav>
+</header>
+<section class="island-details">
+    <h1 class="island-details__name" th:text="${island.name}">Fiji</h1>
+    <h2 class="island-details__country" th:each="country: ${island.countries}"
+        th:text="${country.name}+' '+ ${country.waterWay}">Pacific</h2>
+    <p class="island-details__summary" th:text="${island.description}">
+       A great island to visit
+    </p>
+</section>
+
+<form th:each="hashTag : ${island.hashTags}"
+      th:action="'/islands/' + ${island.id} + '/delete-hashtag/' + ${hashTag.id}" method="POST">
+    <section class="hashTag-details_container">
+        <h4 th:text = "${hashTag.name}"></h4>
+        <button class="deleteHashTag">&times;</button>
+    </section>
+    <input type="hidden" name="hashTagId" th:value="${hashTag.id}">
+</form>
+
+<form th:action="'/islands/' + ${island.id} + '/add-hashtag'" method="POST">
+    <input name = "hashTagName" type="text">
+    <button type="submit">Add Hashtag</button>
+</form>
+
+<a class="nav__home" th:href="'/continents/'+${island.continent.name}">Islands</a>
+</body>
+</html>

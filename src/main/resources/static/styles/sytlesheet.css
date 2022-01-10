@@ -1,0 +1,43 @@
+p{
+    color:black;
+}
+
+body{
+  background-color: lightblue;
+  display: block;
+  min-width: 750px;
+  margin-top: 0;
+  height: 100%;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:grey;
+  }
+
+  li {
+      float: left;
+  }
+
+  li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
+
+  li a:hover {
+      background-color: #111;
+  }
+
+  img{
+      height: 300px;
+      width: 300px;
+      border: 2px;
+      border-color: blue;
+  }
